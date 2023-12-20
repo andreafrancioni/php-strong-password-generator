@@ -8,6 +8,7 @@ $passwordLength = $_GET["passwordLength"];
 $checkedLettere = $_GET["checkedLettere"] ?? false;
 $checkedNumeri = (isset($_GET["checkedNumeri"]) ? $_GET["checkedNumeri"] : false);
 $checkedSimboli = $_GET["checkedSimboli"] ?? false;
+$allowDuplicates = isset($_GET['duplicateYes']) && $_GET['duplicateYes'] == 'on';
 
 $arrayPicker = [];
 $arrayLetters = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z', 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
@@ -59,7 +60,7 @@ if ($checkedSimboli) {
         <div class="passwordGenerated">
             <h1>
                 <?php
-                echo generaPassword($passwordLength, $arrayPicker);
+                echo generaPassword($passwordLength, $arrayPicker, $allowDuplicates);
                 ?>
             </h1>
         </div>

@@ -22,18 +22,23 @@
                 </div>
                 <div class="col-6">
                     <input class="mb-3" type="text" name="passwordLength">
-                    <div class="radio-btn mb-3">
-                        <div class="form-check">
-                            <input class="form-check-input" type="radio" name="radioYes" id="flexRadioDefault1">
+                    <div class="switch mb-3">
+
+                        <!-- <div class="form-check">
+                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
                             <label class="form-check-label" for="flexRadioDefault1">
                                 Si
                             </label>
                         </div>
                         <div class="form-check">
-                            <input class="form-check-input" type="radio" name="radioNo" id="flexRadioDefault2" checked>
+                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
                             <label class="form-check-label" for="flexRadioDefault2">
                                 No
                             </label>
+                        </div> -->
+                        <div class="form-check form-switch">
+                            <input class="form-check-input" type="checkbox" name="duplicateYes" role="switch" id="flexSwitchCheckDefault">
+                            <label class="form-check-label" for="flexSwitchCheckDefault">Consenti</label>
                         </div>
                     </div>
                     <div class="check-box d-flex flex-column">
@@ -64,6 +69,7 @@
                     <button class="btn btn-primary" type="submit">Invia</button>
                     <button class="btn btn-secondary" type="reset">Annulla</button>
                 </div>
+                <div class="col-12"></div>
             </div>
         </form>
     </div>
