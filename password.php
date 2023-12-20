@@ -1,4 +1,9 @@
 <?php
+
+
+include __DIR__ . "/function.php";
+
+
 $passwordLength = $_GET["passwordLength"];
 $checkedLettere = $_GET["checkedLettere"] ?? false;
 $checkedNumeri = (isset($_GET["checkedNumeri"]) ? $_GET["checkedNumeri"] : false);
@@ -23,17 +28,17 @@ if ($checkedSimboli) {
 }
 
 
-function generaPassword($passwordLength, $arrayPicker)
-{
-    $generatedPassword = "";
-    for ($i = 0; $i < $passwordLength; $i++) {
-        $casualCharacters = $arrayPicker[array_rand($arrayPicker)];
+// function generaPassword($passwordLength, $arrayPicker)
+// {
+//     $generatedPassword = "";
+//     for ($i = 0; $i < $passwordLength; $i++) {
+//         $casualCharacters = $arrayPicker[array_rand($arrayPicker)];
 
-        $generatedPassword .= $casualCharacters;
-    }
+//         $generatedPassword .= $casualCharacters;
+//     }
 
-    return $generatedPassword;
-}
+//     return $generatedPassword;
+// }
 
 ?>
 <!DOCTYPE html>
@@ -52,7 +57,11 @@ function generaPassword($passwordLength, $arrayPicker)
     <h3 class="text-center text-white">Genera una password sicura per i tuoi social.</h3>
     <div class="container d-flex justify-content-center flex-column">
         <div class="passwordGenerated">
-            <h1><?php echo generaPassword($passwordLength, $arrayPicker);  ?></h1>
+            <h1>
+                <?php
+                echo generaPassword($passwordLength, $arrayPicker);
+                ?>
+            </h1>
         </div>
         <div class="backPage">
             <h4><a href="form.php">Torna alla pagina precedente</a></h4>
