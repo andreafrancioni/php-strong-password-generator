@@ -1,5 +1,7 @@
 <?php
 
+include __DIR__ . "/password.php";
+
 
 function generaPassword($passwordLength, $arrayPicker, $allowDuplicates)
 {

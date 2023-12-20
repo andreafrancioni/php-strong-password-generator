@@ -13,7 +13,7 @@
     <h1 class="text-center text-white">Strong Password Generator</h1>
     <h3 class="text-center text-white">Genera una password sicura per i tuoi social.</h3>
     <div class="container">
-        <form action="password.php" method="get">
+        <form action="form.php" method="get">
             <div class="row d-flex justify-content-center">
                 <div class="col-6 d-flex flex-column">
                     <label class="mb-3" for="passwordLength">Lunghezza password:</label>
@@ -70,11 +70,16 @@
                     <button class="btn btn-secondary" type="reset">Annulla</button>
                 </div>
                 <div class="col-12">
-                    <?php
+                    <h2>
+                        Password Generata:
+                    </h2>
+                    <h3>
 
-
-                    include __DIR__ . "/password.php";
-                    ?>
+                        <?php
+                        include __DIR__ . "/function.php";
+                        echo generaPassword($passwordLength, $arrayPicker, $allowDuplicates);
+                        ?>
+                    </h3>
                 </div>
             </div>
         </form>
