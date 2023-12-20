@@ -1,8 +1,8 @@
 <?php
 $passwordLength = $_GET["passwordLength"];
-$checkedLettere = $_GET["checkedLettere"];
-$checkedNumeri = $_GET["checkedNumeri"];
-$checkedSimboli = $_GET["checkedSimboli"];
+$checkedLettere = $_GET["checkedLettere"] ?? false;
+$checkedNumeri = (isset($_GET["checkedNumeri"]) ? $_GET["checkedNumeri"] : false);
+$checkedSimboli = $_GET["checkedSimboli"] ?? false;
 
 $arrayPicker = [];
 $arrayLetters = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z', 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
