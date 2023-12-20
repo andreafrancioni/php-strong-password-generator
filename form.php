@@ -30,7 +30,7 @@
                             </label>
                         </div>
                         <div class="form-check">
-                            <input class="form-check-input" type="radio" name="radioNo" id="flexRadioDefault2">
+                            <input class="form-check-input" type="radio" name="radioNo" id="flexRadioDefault2" checked>
                             <label class="form-check-label" for="flexRadioDefault2">
                                 No
                             </label>
@@ -38,19 +38,19 @@
                     </div>
                     <div class="check-box d-flex flex-column">
                         <div class="form-check">
-                            <input class="form-check-input" type="checkbox" name="checkedLettere" value="" id="flexCheckDefault">
+                            <input class="form-check-input" type="checkbox" name="checkedLettere" id="flexCheckDefault" checked>
                             <label class="form-check-label" for="flexCheckDefault">
                                 Lettere
                             </label>
                         </div>
                         <div class="form-check">
-                            <input class="form-check-input" type="checkbox" name="checkedNumeri" value="" id="flexCheckChecked">
+                            <input class="form-check-input" type="checkbox" name="checkedNumeri" id="flexCheckChecked">
                             <label class="form-check-label" for="flexCheckChecked">
                                 Numeri
                             </label>
                         </div>
                         <div class="form-check">
-                            <input class="form-check-input" type="checkbox" name="checkedSimboli" value="" id="flexCheckChecked">
+                            <input class="form-check-input" type="checkbox" name="checkedSimboli" id="flexCheckChecked">
                             <label class="form-check-label" for="flexCheckChecked">
                                 Simboli
                             </label>

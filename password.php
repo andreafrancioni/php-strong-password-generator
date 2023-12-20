@@ -1,15 +1,33 @@
 <?php
 $passwordLength = $_GET["passwordLength"];
+$checkedLettere = $_GET["checkedLettere"];
+$checkedNumeri = $_GET["checkedNumeri"];
+$checkedSimboli = $_GET["checkedSimboli"];
 
-$arrayCharacters = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z', 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', '0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '!', '@', '#', '$', '%', '^', '&', '*', '(', ')', '-', '_', '=', '+', '[', ']', '{', '}', '|', ';', ':', ',', '.', '<', '>', '?'];
-// $arrayNumbers = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9'];
-// $arraySpecialCharacters = ['!', '@', '#', '$', '%', '^', '&', '*', '(', ')', '_', '=', '+', '[', ']', '{', '}', '|', ';', ':', ',', '.', '<', '>', '?'];
+$arrayPicker = [];
+$arrayLetters = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z', 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
+$arrayNumbers = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9'];
+$arraySpecialCharacters = ['!', '@', '#', '$', '%', '^', '&', '*', '(', ')', '_', '=', '+', '[', ']', '{', '}', '|', ';', ':', ',', '.', '?'];
 
-function generaPassword($passwordLength, $arrayCharacters)
+
+if ($checkedLettere) {
+    $arrayPicker = array_merge($arrayPicker, $arrayLetters);
+}
+
+if ($checkedNumeri) {
+    $arrayPicker = array_merge($arrayPicker, $arrayNumbers);
+}
+
+if ($checkedSimboli) {
+    $arrayPicker = array_merge($arrayPicker, $arraySpecialCharacters);
+}
+
+
+function generaPassword($passwordLength, $arrayPicker)
 {
     $generatedPassword = "";
     for ($i = 0; $i < $passwordLength; $i++) {
-        $casualCharacters = $arrayCharacters[array_rand($arrayCharacters)];
+        $casualCharacters = $arrayPicker[array_rand($arrayPicker)];
 
         $generatedPassword .= $casualCharacters;
     }
@@ -34,7 +52,7 @@ function generaPassword($passwordLength, $arrayCharacters)
     <h3 class="text-center text-white">Genera una password sicura per i tuoi social.</h3>
     <div class="container d-flex justify-content-center flex-column">
         <div class="passwordGenerated">
-            <h1><?php echo generaPassword($passwordLength, $arrayCharacters);  ?></h1>
+            <h1><?php echo generaPassword($passwordLength, $arrayPicker);  ?></h1>
         </div>
         <div class="backPage">
             <h4><a href="form.php">Torna alla pagina precedente</a></h4>
