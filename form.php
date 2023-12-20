@@ -38,19 +38,19 @@
                     </div>
                     <div class="check-box d-flex flex-column">
                         <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                            <input class="form-check-input" type="checkbox" name="checkedLettere" value="" id="flexCheckDefault">
                             <label class="form-check-label" for="flexCheckDefault">
                                 Lettere
                             </label>
                         </div>
                         <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
+                            <input class="form-check-input" type="checkbox" name="checkedNumeri" value="" id="flexCheckChecked">
                             <label class="form-check-label" for="flexCheckChecked">
                                 Numeri
                             </label>
                         </div>
                         <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
+                            <input class="form-check-input" type="checkbox" name="checkedSimboli" value="" id="flexCheckChecked">
                             <label class="form-check-label" for="flexCheckChecked">
                                 Simboli
                             </label>
