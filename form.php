@@ -21,7 +21,7 @@
                     <label for="repeatYes">Consenti ripetizioni di uno o più caratteri:</label>
                 </div>
                 <div class="col-6">
-                    <input class="mb-3" type="text" name="passwordLength">
+                    <input class="mb-3" type="number" min="8" max="30" name="passwordLength" required>
                     <div class="switch mb-3">
 
                         <!-- <div class="form-check">
@@ -69,7 +69,13 @@
                     <button class="btn btn-primary" type="submit">Invia</button>
                     <button class="btn btn-secondary" type="reset">Annulla</button>
                 </div>
-                <div class="col-12"></div>
+                <div class="col-12">
+                    <?php
+
+
+                    include __DIR__ . "/password.php";
+                    ?>
+                </div>
             </div>
         </form>
     </div>
